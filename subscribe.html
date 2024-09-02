@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe to MAFS UPDATE by: Kaireen</title>
+</head>
+<body>
+<h2>Subscribe to MAFS UPDATE by: Kaireen</h2>
+<p>Click the button below to subscribe and access the updates:</p>
+
+<!-- PayPal Subscription Button -->
+<div id="paypal-button-container-P-7Y172542RK9912038M3KTYGI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AUCOSeA0hLIb93AWGj9HGmDMYHST6a8T6T-aaujH2b6L5kZgZO63-yFu_w_u8iUuyDGGv5ce6f7VCUgO&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+paypal.Buttons({
+style: {
+shape: 'rect',
+color: 'gold',
+layout: 'vertical',
+label: 'subscribe'
+},
+createSubscription: function(data, actions) {
+return actions.subscription.create({
+/* Creates the subscription */
+plan_id: 'P-7Y172542RK9912038M3KTYGI',
+quantity: 1 // The quantity of the product for a subscription
+});
+},
+onApprove: function(data, actions) {
+alert("Subscription successful! You will be redirected to the Google Drive folder.");
+window.location.href = "https://drive.google.com/drive/folders/1lXfkmSNMSZ2Nn-eAGMwLVJ5MsDyUPWzZ"; // Replace with your Google Drive link
+}
+}).render('#paypal-button-container-P-7Y172542RK9912038M3KTYGI'); // Renders the PayPal button
+</script>
+</body>
+</html>
